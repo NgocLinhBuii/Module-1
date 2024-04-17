@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bien va kieu du lieu</title>
+</head>
+<body>
+<h2>Tính điểm trung bình</h2>
+<input type="number" placeholder="Nhập điểm môn Lý" id="ly">
+<input type="number" placeholder="Nhập điểm môn Hóa" id="hoa">
+<input type="number" placeholder="Nhập điểm môn Sinh" id="sinh">
+<button onclick="trungBinh()">Trung bình</button>
+<p id="result"></p>
+
+<h2>Chuyển đổi độ C sang độ F</h2>
+<input type="number" placeholder="Độ C" id="c">
+<button onclick="csangf()">Nhập</button>
+<p id="kq"></p>
+
+<h2>Diện tích hình tròn</h2>
+<input type='number' placeholder="Nhập bán kính" id="r">
+<button onclick="dienTich()">Nhập</button>
+<p id="kq1"></p>
+
+<h2>Chu vi hình tròn</h2>
+<input type="number" placeholder="Nhập bán kính" id="rr">
+<button onclick="chuVi()">Nhập</button>
+<p id="kq2"></p>
+<script>
+    function trungBinh() {
+        let ly = +document.getElementById("ly").value;
+        let hoa = +document.getElementById("hoa").value;
+        let sinh = +document.getElementById("sinh").value;
+        let trungBinh = (ly + hoa + sinh) / 3;
+        document.getElementById("result").innerHTML ='Result = ' + trungBinh;
+    }
+
+    function csangf() {
+        let c = +document.getElementById('c').value;
+        let f = (9*c / 5) + 32;
+        document.getElementById('kq').innerHTML = 'Result = ' + f;
+    }
+
+    function dienTich() {
+        let r = +document.getElementById('r').value;
+        let dienTich = 3.14 * r * r;
+        document.getElementById('kq1').innerHTML = 'Result = ' + dienTich;
+    }
+
+    function chuVi() {
+        let rr = +document.getElementById('rr').value;
+        let chuVi = 3.14 * 2 * rr;
+        document.getElementById('kq2').innerHTML = 'Result = ' + chuVi;
+    }
+</script>
+</body>
+</html>
