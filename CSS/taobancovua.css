@@ -1,0 +1,16 @@
+table {
+    width: 500px;
+    background-color: orange;
+}
+
+.black-box{
+    width: 60px;
+    height: 60px;
+    background-color: black;
+}
+
+.white-box{
+    width: 60px;
+    height: 60px;
+    background-color: white;
+}
