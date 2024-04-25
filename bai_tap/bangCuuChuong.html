@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Bảng Cửu Chương</h1>
+<table id="main" border="1" >
+
+</table>
+
+<script>
+    let a = "";
+    for (let i = 1; i < 10; i++) {
+        a += "<tr>";
+        for (let j = 2; j < 10; j++) {
+            a += "<td>";
+            a += j + " x " + i + " = " + i * j;
+            a += "</td>";
+        }
+        a += "</tr>";
+    }
+    document.getElementById("main").innerHTML = a;
+
+    // let n = 1;
+    // let a = "";
+    // while (n < 10) {
+    //     n += "<tr>";
+    //     let m = 2;
+    //     while (m < 10) {
+    //         m += "<td>";
+    //         a += m + " x " + n + " = " + m * m;
+    //         m += "</td>";
+    //         m++;
+    //     }
+    //     n += "</tr>";
+    //     n++;
+    // }
+
+</script>
+</body>
+</html>
