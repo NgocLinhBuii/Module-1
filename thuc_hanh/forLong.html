@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table id="main" border="1" cellspacing="0" cellpadding="3">
+    
+</table>
+<script>
+    let n = '';
+    for (let i = 1; i <= 10; i++) {
+        n+= '<tr>';
+        for (let j = 1; j <= 10; j++) {
+            n+= '<td>' + i * j + '</td>';
+        }
+        n+= '</tr>'
+    }
+    document.getElementById('main').innerHTML = n;
+</script>
+</body>
+</html>
