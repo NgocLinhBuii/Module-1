@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+    //bài 1
+    // for (let i = 1; i <= 100; i++) {
+    //     if (i === 99) {
+    //         alert ("hoàn thành");
+    //     } else (i);
+    // }
+
+    //bài 2
+    // let nhietDo = +prompt("nhập nhiệt độ");
+    // do {
+    //     if (nhietDo > 100){
+    //         alert ("giảm nhiệt độ");
+    //         nhietDo = +prompt("nhập nhiệt độ");
+    //     } else if (nhietDo < 20){
+    //         alert ("tăng nhiệt độ");
+    //         nhietDo = +prompt("nhập nhiệt độ");
+    //     } else {
+    //         alert ("nhiệt độ hợp lệ");
+    //         break;
+    //     }
+    // } while (true);
+    //bài 3
+    // let first = 0;
+    // let second = 1;
+    // let next = 0;
+    // for (let i = 0; i < 20; i++) {
+    //     document.write(first + '<br>');
+    //     next = first + second;
+    //     first = second;
+    //     second = next;
+    // }
+    //bài 4
+    // let first = 0;
+    // let second = 1;
+    // let next = 0;
+    // let count = 0;
+    // for (let i = 0; i < 20; i++) {
+    //     next = first + second;
+    //     first = second;
+    //     second = next;
+    //     if(first % 5 === 0) {
+    //         count++;
+    //         if (count === 1){
+    //             document.write(first);
+    //         }
+    //     }
+    // }
+
+    //bài 5
+    // let first = 0;
+    // let second = 1;
+    // let next = 0;
+    // let sum = 0;
+    // for (let i = 0; i < 20; i++) {
+    //     next = first + second;
+    //     first = second;
+    //     second = next;
+    //     sum+=first;
+    // }
+    // document.write(sum);
+    //bài 6
+    // let sum = 0;
+    // for (let i = 0; i < 30; i++) {
+    //     sum+=30 * 7;
+    // }
+    // document.write(sum);
+
+    //bài 7
+    for (let i = 1; i < 100; i++) {
+        if (i % 3 === 0 && i % 5 ===0){
+            document.write("FizzBuzz" + "<br>" );
+        } else if (i % 3 === 0) {
+            document.write("Fizz" + "<br>");
+        } else if (i % 5 === 0) {
+            document.write("Buzz" + "<br>");
+        }
+    }
+</script>
+</body>
+</html>
