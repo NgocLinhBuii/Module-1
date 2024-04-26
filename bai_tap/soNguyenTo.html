@@ -1,10 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Title</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
 
+
+<script>
+    let numbers = +prompt("Nhập số lượng số nguyên tố cần in ra:");
+    let count = 0;
+    function isPrime(num) {
+        if (num <= 1) {
+            return false;
+        }
+        for (let i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i === 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    let currentNumber = 2;
+    while (count < numbers) {
+        if (isPrime(currentNumber)) {
+            document.write(currentNumber + '<br>');
+            count++;
+        }
+        currentNumber++;
+    }
+
+</script>
 </body>
 </html>
