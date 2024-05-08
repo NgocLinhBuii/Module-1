@@ -8,14 +8,14 @@
 
 
 <script>
-    //bài 1
+    //bài 1  Sử dụng vòng lặp để đếm từ 1 đến 100. Khi số là 99, hiển thị hộp thoại thông báo là đã hoàn thành.
     // for (let i = 1; i <= 100; i++) {
     //     if (i === 99) {
     //         alert ("hoàn thành");
     //     } else (i);
     // }
 
-    //bài 2
+    //bài 2 Sử dụng hàm prompt() để lấy thông tin nhiệt độ hiện tại được nhập bởi người truy cập. Nếu nhiệt độ nhập vào trên 100, yêu cầu người dùng giảm nhiệt độ. Nếu nhiệt độ dưới 20, yêu cầu người dùng tăng nhiệt độ.
     // let nhietDo = +prompt("nhập nhiệt độ");
     // do {
     //     if (nhietDo > 100){
@@ -29,17 +29,17 @@
     //         break;
     //     }
     // } while (true);
-    //bài 3
-    // let first = 0;
-    // let second = 1;
-    // let next = 0;
-    // for (let i = 0; i < 20; i++) {
-    //     document.write(first + '<br>');
-    //     next = first + second;
-    //     first = second;
-    //     second = next;
-    // }
-    //bài 4
+    //bài 3  Hiển thị ra 20 số trong dãy fibonacci đầu tiên.
+    let first = 0;
+    let second = 1;
+    let next = 0;
+    for (let i = 0; i < 20; i++) {
+        document.write(first + '<br>');
+        next = first + second;
+        first = second;
+        second = next;
+    }
+    //bài 4 Tìm số đầu tiên trong dãy fibonacci chia hết cho 5.
     // let first = 0;
     // let second = 1;
     // let next = 0;
@@ -56,7 +56,7 @@
     //     }
     // }
 
-    //bài 5
+    //bài 5  Tính tổng của 20 số đầu tiên trong dãy fibonacci.
     // let first = 0;
     // let second = 1;
     // let next = 0;
@@ -68,23 +68,23 @@
     //     sum+=first;
     // }
     // document.write(sum);
-    //bài 6
+    //bài 6  Tính tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên.
     // let sum = 0;
     // for (let i = 0; i < 30; i++) {
     //     sum+=30 * 7;
     // }
     // document.write(sum);
 
-    //bài 7
-    for (let i = 1; i < 100; i++) {
-        if (i % 3 === 0 && i % 5 ===0){
-            document.write("FizzBuzz" + "<br>" );
-        } else if (i % 3 === 0) {
-            document.write("Fizz" + "<br>");
-        } else if (i % 5 === 0) {
-            document.write("Buzz" + "<br>");
-        }
-    }
+    //bài 7 Hãy viết một chương trình in ra các số từ 1 đến 100. Nhưng nếu số chia hết cho 3 thì in ra "Fizz", 5 thì in ra "Buzz" thay vì in ra số đó. Và nếu số đó chia hết cho cả 3 và 5 thì in ra chữ "FizzBuzz".
+    // for (let i = 1; i < 100; i++) {
+    //     if (i % 3 === 0 && i % 5 ===0){
+    //         document.write("FizzBuzz" + "<br>" );
+    //     } else if (i % 3 === 0) {
+    //         document.write("Fizz" + "<br>");
+    //     } else if (i % 5 === 0) {
+    //         document.write("Buzz" + "<br>");
+    //     }
+    // }
 </script>
 </body>
 </html>
