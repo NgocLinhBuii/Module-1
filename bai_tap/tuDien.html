@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="input">Nhap tu: </label>
+<input type="text" id="input">
+<button type="button" id="" onclick="trans()">Dich</button>
+<h4 id="result"></h4>
+
+<script>
+    function trans() {
+        let arrEng = ["banana", "apple", "orange", "book"];
+        let arrVie = ["chuoi", "tao", "cam", "sach"];
+        let string = document.getElementById("input").value;
+        let index = 0;
+        let result = "";
+        for (let i = 0; i < arrEng.length; i++) {
+            if (string === arrEng[i]) {
+                index = i;
+                for (let j = 0; j < arrVie.length; j++) {
+                    if (index === j){
+                        result = arrVie[j];
+                        break;
+                    }
+                }
+            }
+        }
+        document.getElementById("result").innerHTML = result;
+    }
+</script>
+</body>
+</html>
