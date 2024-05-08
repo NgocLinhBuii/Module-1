@@ -1,10 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Title</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
 
+<script>
+<!--Bài 1: Viết một chương trình Javascript để nối tất cả các phần tử trong một mảng chuỗi lại với nhau. Ví dụ có mảng chuỗi như sau: myColor = ["Red", "Green", "White", "Black"];-->
+// let myColor = ["Red", "Green", "White", "Black"];
+//
+// document.write(myColor.toString() + "<br>");
+// document.write(myColor.join() + "<br>");
+// document.write(myColor.join("+") + "<br>");
+// document.write(myColor.join("xXxXx"));
+
+//Bài 2: Viết một chương trình nhận một số nhập vào và chèn dấu (-) giữa 2  số chẵn. Ví dụ nếu bạn nhập vào 025468 thì kết quả của chương trình sẽ là 0-254-6-8.
+// let num = window.prompt();
+// let str = num.toString();
+// let result = [str[0]];
+// for (let x = 1; x < str.length; x++) {
+//     if (str[x - 1] % 2 === 0 && str[x] % 2 === 0) {
+//         result.push('-', str[x]);
+//     } else {
+//         result.push(str[x]);
+//     }
+// }
+//
+// document.write(result.join(''));
+
+let str = prompt("Nhap cac ki tu");
+let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+let result = [];
+
+for(let x=0; x<str.length; x++)
+{
+    if(UPPER.indexOf(str[x]) !== -1)
+    {
+        result.push(str[x].toLowerCase());
+    }
+    else if(LOWER.indexOf(str[x]) !== -1)
+    {
+        result.push(str[x].toUpperCase());
+    }
+    else
+    {
+        result.push(str[x]);
+    }
+}
+document.write(result.join(''));
+</script>
 </body>
 </html>
