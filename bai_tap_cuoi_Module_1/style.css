@@ -1,0 +1,70 @@
+body {
+    font-family: Calibri, sans-serif;
+    background-color: antiquewhite;
+    margin: 0;
+    padding: 20px;
+}
+.container {
+    display: flex;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    text-align: center;
+    font-size: 50px;
+    color: darkblue;
+}
+h2 {
+    text-align: center;
+    font-size: 30px;
+    color: darkblue;
+
+}
+.form-container, .table-container {
+    width: 100%;
+}
+input {
+    width: 96%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+
+}
+button {
+    display: block;
+    width: 99%;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th, td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.product-img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+#anhbia1 {
+    width: 500px;
+    height: 100%;
+}
+#anhbia2 {
+    width: 535px;
+    height: 100%;
+}
+
