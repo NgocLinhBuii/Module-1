@@ -67,12 +67,11 @@
         let kiemTra = danhSachSoTietKiem.some(tonTai => tonTai.maSo === maSo);
         if (kiemTra) {
             alert("Sổ tiết kiệm đã có trong danh sách !!!");
+        } else {
+            let soTietKiem = new SoTietKiem(maSo, loaiTietKiem, hoTenKhachHang, CMND, ngayMoSo, soTienGui);
+            danhSachSoTietKiem.push(soTietKiem);
+            alert("Thêm sổ thành công");
         }
-
-        let soTietKiem = new SoTietKiem(maSo, loaiTietKiem, hoTenKhachHang, CMND, ngayMoSo, soTienGui);
-        danhSachSoTietKiem.push(soTietKiem);
-
-        alert("Thêm sổ thành công");
         display();
     }
 
