@@ -20,10 +20,10 @@
         return true;
     }
 
-    let n = +prompt("Nhập số lượng phần tử của mảng");
-    if (isNaN(n) || n <= 0 || n > 50) {
-        alert("Số lượng phần tử phải lớn hơn 0 và nhỏ hơn 50");
-    }
+    let n;
+    do {
+        n = +prompt("Nhập số lượng phần tử của mảng lớn hơn 0 và nhỏ hơn 50");
+    } while (isNaN(n) || n <= 0 || n > 50);
     let arr = [];
 
     for (let i = 0; i < n; i++) {
