@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+    function soSanh(tuSo1, mauSo1, tuSo2, mauSo2) {
+        let pSo1 = tuSo1 * mauSo2;
+        let pSo2 = tuSo2 * mauSo1;
+            return pSo1 === pSo2;
+    }
+
+    let tuSo1 = +prompt ("Nhập tử số số thứ nhất: ");
+    let mauSo1 = +prompt ("Nhập mẫu số số thứ hai: ");
+    let tuSo2 = +prompt ("Nhập tử số số thứ 2: ");
+    let mauSo2 = +prompt("Nhập mẫu số số thứ 2: ");
+    if(soSanh(tuSo1,mauSo1,tuSo2,mauSo2)){
+        document.write("True");
+    }else {
+        document.write("False");
+    }
+</script>
+</body>
+</html>

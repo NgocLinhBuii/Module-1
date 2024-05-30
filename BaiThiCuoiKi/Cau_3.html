@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sổ tiết kiệm</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        body {
+            font-family: Calibri, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+<h1>Sổ tiết kiệm</h1>
+<h2>Danh sách sổ tiết kiệm</h2>
+<table border=1>
+    <thead>
+    <tr>
+        <th>Mã Số</th>
+        <th>Loại tiết kiệm</th>
+        <th>Họ Tên</th>
+        <th>CMND</th>
+        <th>Ngày mở sổ</th>
+        <th>Số tiền gửi</th>
+    </tr>
+    </thead>
+    <tbody id="table">
+    </tbody>
+</table>
+
+<script>
+    class SoTietKiem {
+        constructor(maSo, loaiTietKiem, hoTenKhachHang, CMND, ngayMoSo, soTienGui) {
+            this.maSo = maSo;
+            this.loaiTietKiem = loaiTietKiem;
+            this.hoTenKhachHang = hoTenKhachHang;
+            this.CMND = CMND;
+            this.ngayMoSo = ngayMoSo;
+            this.soTienGui = soTienGui;
+        }
+
+        getmaSo() {
+            return this.maSo;
+        }
+    }
+
+    let danhSachSoTietKiem = [];
+
+    function themSoTietKiem() {
+        let maSo = prompt("Nhập mã số: ");
+        let loaiTietKiem = prompt("Nhập loại tiết kiệm: ");
+        let hoTenKhachHang = prompt("Nhập họ và tên: ");
+        let CMND = +prompt("Nhập số CMND: ");
+        let ngayMoSo = prompt("Nhập ngày mở sổ: ");
+        let soTienGui = +prompt("Nhập số tiền cần gửi: ");
+
+        let kiemTra = danhSachSoTietKiem.some(tonTai => tonTai.maSo === maSo);
+        if (kiemTra) {
+            alert("Sổ tiết kiệm đã có trong danh sách !!!");
+        }
+
+        let soTietKiem = new SoTietKiem(maSo, loaiTietKiem, hoTenKhachHang, CMND, ngayMoSo, soTienGui);
+        danhSachSoTietKiem.push(soTietKiem);
+
+        alert("Thêm sổ thành công");
+        display();
+    }
+
+    function display() {
+        let str = "";
+        for (let i = 0; i < danhSachSoTietKiem.length; i++) {
+            str += "<tr>";
+            str += "<td>" + danhSachSoTietKiem[i].maSo + "</td>";
+            str += "<td>" + danhSachSoTietKiem[i].loaiTietKiem + "</td>";
+            str += "<td>" + danhSachSoTietKiem[i].hoTenKhachHang + "</td>";
+            str += "<td>" + danhSachSoTietKiem[i].CMND + "</td>";
+            str += "<td>" + danhSachSoTietKiem[i].ngayMoSo + "</td>";
+            str += "<td>" + danhSachSoTietKiem[i].soTienGui + "</td>";
+            str += "<td><button onclick=\"deleteSo(" + i + ")\">Xóa</button></td>";
+            str += "</tr>";
+        }
+        document.getElementById("table").innerHTML = str;
+    }
+
+    function deleteSo(index) {
+        let check = confirm("Bạn muốn xóa sổ tiết kiệm " + danhSachSoTietKiem[index].getmaSo() + " này?");
+        if (check) {
+            danhSachSoTietKiem.splice(index, 1);
+            display();
+        }
+    }
+</script>
+<button onclick="themSoTietKiem()">Thêm sổ tiết kiệm</button>
+</body>
+</html>
